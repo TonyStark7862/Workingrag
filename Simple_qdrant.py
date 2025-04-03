@@ -84,7 +84,7 @@ def check_login():
 def show_login():
     st.title("Login to RAG PDF Chat")
     
-    email = st.text_input("Email (@nomura.com)", key="login_email")
+    email = st.text_input("Email", key="login_email")
     
     if st.button("Login"):
         if validate_email(email):
@@ -93,7 +93,7 @@ def show_login():
             logger.info(f"User logged in: {email}")
             st.rerun()
         else:
-            st.error("Please enter a valid @nomura.com email address")
+            st.error("Please enter a valid email address")
             logger.warning(f"Invalid login attempt with email: {email}")
 
 # Main application
