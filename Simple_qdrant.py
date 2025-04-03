@@ -71,7 +71,7 @@ def log_feedback(email, question, file_name, response):
 
 # Validate email format
 def validate_email(email):
-    pattern = r'^[a-zA-Z0-9._%+-]+@nomura\.com$'
+    pattern = r'^[a-zA-Z0-9._%+-]+@xyz\.com$'
     return re.match(pattern, email) is not None
 
 # Check login state
